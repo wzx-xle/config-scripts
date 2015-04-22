@@ -1,25 +1,9 @@
 1、本经验目前在Ubuntu14.04环境下，已有搜狗输入法 for Linux和Sublime Text 3的情况下安装成功。
 
-2、保存下面的代码到文件sublime_imfix.c(位于~目录)
-#include <gtk/gtkimcontext.h>
-void gtk_im_context_set_client_window (GtkIMContext *context,
-         GdkWindow    *window)
-{
- GtkIMContextClass *klass;
- g_return_if_fail (GTK_IS_IM_CONTEXT (context));
- klass = GTK_IM_CONTEXT_GET_CLASS (context);
- if (klass->set_client_window)
-   klass->set_client_window (context, window);
- g_object_set_data(G_OBJECT(context),"window",window);
- if(!GDK_IS_WINDOW (window))
-   return;
- int width = gdk_window_get_width(window);
- int height = gdk_window_get_height(window);
- if(width != 0 && height !=0)
-   gtk_im_context_focus_in(context);
-}
+2、保存下面的代码到文件sublime_imfix.c(将当前目录的下的sublime_imfix.c复制到~目录下编译)
 
-3、将上一步的代码编译成共享库libsublime-imfix.so，命令
+3、将上一步的代码编译成共享库libsublime-imfix.so，可能会缺少libgtk2.0-dev和gcc，命令
+sudo apt-get install build-essential libgtk2.0-dev
 cd ~
 gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
 
