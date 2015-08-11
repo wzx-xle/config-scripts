@@ -1,0 +1,39 @@
+set shortmess=atI
+set nu
+"color asmanian2
+set guifont=Courier_New:h10:cANSI
+syntax on
+autocmd InsertLeave * se nocul
+autocmd InsertEnter * se cul
+set autoread
+autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
+set completeopt=preview,menu 
+filetype plugin on
+set clipboard+=unnamed 
+set nobackup
+set noeb
+set confirm
+set autoindent
+set cindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+set smarttab
+set number
+set history=1000
+set nobackup
+set noswapfile
+set ignorecase
+set hlsearch
+set incsearch
+filetype on
+filetype indent on
+set iskeyword+=_,$,@,%,#,-
+set linespace=0
+set backspace=2
+set showmatch
+set matchtime=1
+set smartindent
+set completeopt=longest,menu
+set laststatus=2
