@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2
+GenericName=Text Editor
+
+Exec=subl
+Terminal=false
+Icon=/opt/sublime_text/sublime_text_2/Icon/48x48/sublime_text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Shortcuts=NewWindow
+
+[NewWindow Shartcut Group]
+Name=New Window
+Exec=subl -n
+TargetEnvironment=Unity
