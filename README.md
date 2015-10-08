@@ -9,3 +9,6 @@
 
 ### 3、vim的配置
 > set_vim.sh
+
+### 4、定时同步IP地址，2个小时检查一次
+> timer_ip.sh
