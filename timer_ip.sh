@@ -9,7 +9,7 @@ cd syncInfo
 while true; do
 	echo `date "+%Y-%m-%d %H:%M:%S"`
 	
-	# Ö´ĞĞ·¢²¼IPµÄ½Å±¾
+	# æ‰§è¡Œå‘å¸ƒIPçš„è„šæœ¬
 	. ./publish_rasp_ip.sh
 	
 	sleep $period
