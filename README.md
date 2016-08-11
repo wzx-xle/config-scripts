@@ -31,8 +31,8 @@ cat linux/.bash_aliases >> ~/.bash_aliases
 ## 开发工具
 1. eclipse
     1. java
-        1. [zxwang2](config-scripts/devtool/eclipse/java/zxwang2)
-        2. [wxyz](config-scripts/devtool/eclipse/java/wxyz)
+        1. zxwang2
+        2. wxyz
 2. idea
     1. ideaIU-14-key
 3. sublime text
