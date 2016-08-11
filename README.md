@@ -25,7 +25,8 @@ cd linux
 
 1. 添加到本地别名列表中
 ``` Bash
-cat linux/.bash_aliases >> ~/.bash_aliases
+cd linux
+cat .bash_aliases >> ~/.bash_aliases
 ```
 
 ## 开发工具
