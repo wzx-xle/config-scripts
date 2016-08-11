@@ -2,11 +2,12 @@
 
 machine="rasp"
 ipFile="${machine}.ip"
+
 if [ ! -f "$ipFile" ]; then
 	touch $ipFile
 fi
 
-oldIp=`cat $ipFile`
+oldIp=`tail -n 1 rasp.ip | awk '{print $NF}'`
 #echo $oldIp
 
 getIpUrl='http://members.3322.org/dyndns/getip'
@@ -21,11 +22,11 @@ if [ "$oldIp" = "$currIp" ]; then
 else
 	echo "new ip is $currIp"
 	
-	git pull
+	git pull private master
 	
 	echo "$hostname $currTime $currIp" >> $ipFile
 	
 	git add $ipFile
 	git commit -m "${machine} ip address was changed."
-	git push -u origin master
+	git push private master
 fi
