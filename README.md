@@ -23,20 +23,20 @@ cd linux
 
 ## Linux配置
 
-1. 别名列表
-```
+1. 添加到本地别名列表中
+``` Bash
 cat linux/.bash_aliases >> ~/.bash_aliases
 ```
 
 ## 开发工具
 1. eclipse
     1. java
-        1. [zxwang2](devtool/eclipse/java/zxwang2)
-        2. [wxyz](devtool/eclipse/java/wxyz)
+        1. [zxwang2](config-scripts/devtool/eclipse/java/zxwang2)
+        2. [wxyz](config-scripts/devtool/eclipse/java/wxyz)
 2. idea
     1. ideaIU-14-key
 3. sublime text
-    1. sublime text 3的中文输入法支持 [详细](devtool/sublime/sublime.md)
+    1. sublime text 3的中文输入法支持 [详细](config-scripts/devtool/sublime/sublime.md)
 4. vim
 
 ## Python脚本
